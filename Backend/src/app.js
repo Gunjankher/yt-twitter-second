@@ -28,9 +28,8 @@ app.use(
   
 
 const allowedOrigins = [
-  'https://yt-twitter-second-dd98.vercel.app/',
-    // 'http://localhost:5173',
-    // 'https://youtube-frontend-olive.vercel.app',
+  'https://yt-twitter-second-dd98.vercel.app',
+  'http://localhost:5173',
   ];
   
   app.use(cors({
