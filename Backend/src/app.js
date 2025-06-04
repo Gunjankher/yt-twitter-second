@@ -22,7 +22,7 @@ app.use(helmet.contentSecurityPolicy({
 
 const allowedOrigins = [
   'https://yt-twitter-second-dd98.vercel.app/',
-    'http://localhost:5173',
+    // 'http://localhost:5173',
     // 'https://youtube-frontend-olive.vercel.app',
   ];
   
