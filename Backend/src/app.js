@@ -7,17 +7,24 @@ import helmet from 'helmet'
 const app = express()
 
 
-app.use(helmet.contentSecurityPolicy({
+app.use(
+  helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'none'"], // Deny all by default
-      scriptSrc: ["'self'", "blob:", "https://youtube-twitter-g9pj.onrender.com"], // Allow scripts from self, blob, and your backend
-      styleSrc: ["'self'", "https://fonts.googleapis.com"], // Allow styles from self and Google Fonts
-      fontSrc: ["'self'", "https://fonts.gstatic.com"], // Allow fonts from Google Fonts
-      objectSrc: ["'none'"], // Disallow <object> tags (adjust this as needed)
-      imgSrc: ["'self'", "https://images.unsplash.com"], // Allow images from self and external image sources
-      connectSrc: ["'self'", "blob:", "https://youtube-frontend-olive.vercel.app", "https://youtube-twitter-g9pj.onrender.com"],
+      defaultSrc: ["'none'"],
+      scriptSrc: ["'self'", "blob:"],
+      styleSrc: ["'self'", "https://fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      objectSrc: ["'none'"],
+      imgSrc: ["'self'", "https://images.unsplash.com", "data:"],
+      connectSrc: [
+        "'self'",
+        "blob:",
+        "https://yt-twitter-second-dd98.vercel.app",
+      ],
     },
-  }));
+  })
+);
+
   
 
 const allowedOrigins = [
